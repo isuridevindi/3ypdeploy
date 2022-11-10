@@ -4,7 +4,7 @@ function getExam() {
     var serverIP = localStorage.getItem('serverIP')
     axios({
             method: 'get',
-            url: 'https://' + serverIP + '/api/student/exams/self',
+            url: serverIP + '/student/exams/self',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),

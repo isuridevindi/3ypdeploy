@@ -215,7 +215,7 @@ document.getElementById("entername").addEventListener("click", () => {
         sessionStorage.setItem("name", newname);
         axios({
                 method: 'put',
-                url: 'https://' + serverIP + '/api/student/students/self',
+                url: serverIP + '/student/students/self',
                 responseType: 'json',
                 headers: {
                     'Authorization': "BEARER " + sessionStorage.getItem('token'),
@@ -270,7 +270,7 @@ uploadpicture.onsubmit = async(e) => {
         // console.log(body)
     axios({
             method: 'post',
-            url: 'https://' + serverIP + '/api/student/profilePicture',
+            url:  serverIP + '/student/profilePicture',
             contentType: 'multipart/form-data',
             responseType: 'json',
             headers: {
@@ -302,7 +302,7 @@ function updateProfile() {
     var serverIP = localStorage.getItem('serverIP')
     axios({
             method: 'get',
-            url: 'https://' + serverIP + '/api/student/students/self',
+            url:  serverIP + '/student/students/self',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),

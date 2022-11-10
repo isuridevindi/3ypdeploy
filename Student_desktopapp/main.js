@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const { BrowserWindow, Menu, MenuItem, ipcMain, app } = require('electron')
+const { BrowserWindow, Menu, MenuItem, ipcMain, app, screen  } = require('electron')
 const path = require('path')
 const { download } = require("electron-dl");
 const ipc = ipcMain
@@ -18,12 +18,15 @@ oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const drive = google.drive({ version: 'v3', auth: oauth2Client, });
 
 
+app.disableHardwareAcceleration();
 
 // Create browser window
 function createWindow() {
+    const { width, height } = screen.getPrimaryDisplay().workAreaSize
     const mainWindow = new BrowserWindow({
-        width: 800,
-        height: 480,
+        width: width,
+        height: (width/5) * 3,
+        
         // minimizable: false,
         maximizable: false,
         resizable: false,
@@ -34,11 +37,11 @@ function createWindow() {
             nodeIntegration: true,
             contextIsolation: false,
             enableRemoteModule: true,
-            //devTools: true,
-            devTools: false,
+            devTools: true,
+            //devTools: false,
         }
     })
-    mainWindow.setAlwaysOnTop(true, 'screen');
+    //mainWindow.setAlwaysOnTop(true, 'screen');
 
     createFiles();
 
@@ -82,7 +85,7 @@ function createWindow() {
     // load main page
     mainWindow.loadFile('src/loginpage.html');
     // Open the DevTools.
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
     // console.log(app.getAppPath())
     // Load pages
     ipc.on('Login', () => { mainWindow.loadFile('src/loginpage.html') })

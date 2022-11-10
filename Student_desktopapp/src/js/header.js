@@ -49,7 +49,7 @@ for (var i = 0; i < btncount; i += 1) {
 if (typeof(Storage) !== "undefined" && localStorage.disconnections) {
     axios({
             method: 'put',
-            url: 'https://' + serverIP + '/api/student/exam_rooms/disconnections',
+            url: serverIP + '/student/exam_rooms/disconnections',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),

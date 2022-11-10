@@ -133,7 +133,7 @@ router.post('/login', (req, res) => {
     // try{
     students.findOne({ email }).select("+password")  
     .then(async student => {
-        // console.log(student);
+        console.log(student);
         if(!student){
             return res.status(404).json({status: 'failure', message: "Email does not exist"});
         }

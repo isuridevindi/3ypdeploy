@@ -2,7 +2,7 @@ function saveData() {
     var serverIP = localStorage.getItem('serverIP')
     axios({
             method: 'get',
-            url: 'https://' + serverIP + '/api/student/students/self',
+            url: serverIP + '/student/students/self',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),
@@ -14,7 +14,7 @@ function saveData() {
             sessionStorage.setItem('regNo', response.data.regNo);
             sessionStorage.setItem('department', response.data.department);
             sessionStorage.setItem('device', response.data.device);
-            sessionStorage.setItem('profilepic', "https://" + serverIP + "/api" + response.data.profile_picture);
+            sessionStorage.setItem('profilepic',  serverIP + "/api" + response.data.profile_picture);
             getExam();
 
         })

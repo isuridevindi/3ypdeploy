@@ -20,75 +20,74 @@
 <body>
     <div id='outer'>
         <div id='inner'>
-            <div class='welcome waves-effect waves-teal'>
+            <div class='welcome'>
                 <div class='appName'>Connexa</div>
+                <div id='server-connection'>
+                    <p id='display-server'></p>
+                </div>
                 <div id='frontimg'>
                     <img src='img/frontimg.png'>
                 </div>
-            </div>
-            <div id='server-connection'>
-                <p id='display-server'></p>
+                <div id='sign-in-up'>
+                    <!------Login/Register button------>
+                    <div class="switch">
+                        <input type="checkbox" id="switch" name="checkbox" style="display: none;">
+                        <div class="app">
+                            <div class="content">
+                                <label for="switch">
+                                <div class="toggle"></div>
+                                <div class="names">
+                                <p class="light">Log in</p>
+                                <p class="dark">Register</p>
+                                </div>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='sign-in'>
+                        <form method="post">
+                            <h1>Login</h1>
+                            <!-- <div class="separator">or</div> -->
+                            <p id='log-error'></p>
+    
+                            <p>Email</p>
+                            <p><input type="text" name="email" placeholder="Enter your email address" maxlength="128" id="log-email" class='user-input Gray'></p>
+                            <p>Password</p>
+                            <p>
+                                <input type="password" maxlength="128" name="password" id="log-password" placeholder="Enter your password" class='user-input Gray' />
+                                <i class="bi bi-eye-slash" id="log-togglePassword" onclick="togglePassword('log-password','log-togglePassword')"></i>
+                            </p>
+                            <p><input type="checkbox" class="staylogged" value="lsRememberMe" id="staylogged"><span>Remember me</span></p>
+                            <div class='submit'><button type="submit" name="Log-in" id="login" onclick="lsRememberMe()" class="btn btn-default waves-effect waves-light">Log in</button></div>
+                        </form>
+                    </div>
+                    <div id='sign-up'>
+                        <form method="post">
+                            <h1>Register</h1>
+                            <!--<div class="separator">or</div> -->
+    
+                            <p id='reg-error'></p>
+    
+                            <p>Email</p>
+                            <p><input type="text" placeholder="Enter your email address" maxlength="128" id="reg-email" class='user-input Gray'></p>
+                            <p>Password</p>
+                            <p>
+                                <input type="password" name="password" maxlength="128" id="reg-password" placeholder="Enter your password" class='user-input Gray' />
+                                <i class="bi bi-eye-slash" id="reg-togglePassword" onclick="togglePassword('reg-password','reg-togglePassword')"></i>
+                            </p>
+                            <p>Confirm</p>
+                            <p>
+                                <input type="password" name="password" maxlength="128" id="confirm-password" placeholder="Enter your password" class='user-input Gray' />
+    
+                            </p>
+                            <div class='submit'><button type="submit" name='Sign up' id="register" class="btn btn-default waves-effect waves-light">Sign up</button></div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <!-- <div class="logo">
                 <img class="image" src="img/appicon3.png">
             </div> -->
-
-            <div id='sign-in-up'>
-                <!------Login/Register button------>
-                <div class="switch">
-                    <input type="checkbox" id="switch" name="checkbox" style="display: none;">
-                    <div class="app">
-                        <div class="content">
-                            <label for="switch">
-                            <div class="toggle"></div>
-                            <div class="names">
-                            <p class="light">Log in</p>
-                            <p class="dark">Register</p>
-                            </div>
-                        </label>
-                        </div>
-                    </div>
-                </div>
-                <div id='sign-in'>
-                    <form method="post">
-                        <h1>Login</h1>
-                        <!-- <div class="separator">or</div> -->
-                        <p id='log-error'></p>
-
-                        <p>Email</p>
-                        <p><input type="text" name="email" placeholder="Enter your email address" maxlength="128" id="log-email" class='user-input Gray'></p>
-                        <p>Password</p>
-                        <p>
-                            <input type="password" maxlength="128" name="password" id="log-password" placeholder="Enter your password" class='user-input Gray' />
-                            <i class="bi bi-eye-slash" id="log-togglePassword" onclick="togglePassword('log-password','log-togglePassword')"></i>
-                        </p>
-                        <p><input type="checkbox" class="staylogged" value="lsRememberMe" id="staylogged"><span>Remember me</span></p>
-                        <div class='submit'><button type="submit" name="Log-in" id="login" onclick="lsRememberMe()" class="btn btn-default waves-effect waves-light">Log in</button></div>
-                    </form>
-                </div>
-                <div id='sign-up'>
-                    <form method="post">
-                        <h1>Register</h1>
-                        <!--<div class="separator">or</div> -->
-
-                        <p id='reg-error'></p>
-
-                        <p>Email</p>
-                        <p><input type="text" placeholder="Enter your email address" maxlength="128" id="reg-email" class='user-input Gray'></p>
-                        <p>Password</p>
-                        <p>
-                            <input type="password" name="password" maxlength="128" id="reg-password" placeholder="Enter your password" class='user-input Gray' />
-                            <i class="bi bi-eye-slash" id="reg-togglePassword" onclick="togglePassword('reg-password','reg-togglePassword')"></i>
-                        </p>
-                        <p>Confirm</p>
-                        <p>
-                            <input type="password" name="password" maxlength="128" id="confirm-password" placeholder="Enter your password" class='user-input Gray' />
-
-                        </p>
-                        <div class='submit'><button type="submit" name='Sign up' id="register" class="btn btn-default waves-effect waves-light">Sign up</button></div>
-                    </form>
-                </div>
-            </div>
             <div id='server-selection'>
                 <h3>Select or add the server you want to connect</h3>
                 <div id='connections'></div>

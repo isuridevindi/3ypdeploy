@@ -85,7 +85,7 @@ login.addEventListener('click', function(e) {
 
     axios({
             method: 'post',
-            url: 'https://' + serverIP + '/api/student/login',
+            url:  serverIP + '/student/login',
             responseType: 'json',
             data: {
                 "email": logemail.value,
@@ -99,6 +99,7 @@ login.addEventListener('click', function(e) {
             saveData();
         })
         .catch(function(error) {
+            console.log(error)
             if (error.response) {
                 logerror.innerHTML = "* " + error.response.data.message;
 
@@ -151,7 +152,7 @@ register.addEventListener('click', function(e) {
     var serverIP = localStorage.getItem('serverIP')
     axios({
             method: 'post',
-            url: 'https://' + serverIP + '/api/student/register',
+            url:  serverIP + '/student/register',
             responseType: 'json',
             data: {
                 "email": regemail.value,

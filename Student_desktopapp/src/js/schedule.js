@@ -13,7 +13,7 @@ var eventArray = [];
 if (navigator.onLine) {
     axios({
             method: 'get',
-            url: 'https://' + serverIP + '/api/student/exams/self',
+            url:  serverIP + '/student/exams/self',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),

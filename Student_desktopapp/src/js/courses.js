@@ -10,7 +10,7 @@ var btn, btncount
 if (navigator.onLine) {
     axios({
             method: 'get',
-            url: 'https://' + serverIP + '/api/student/courses/self',
+            url: serverIP + '/student/courses/self',
             responseType: 'json',
             headers: {
                 'Authorization': "BEARER " + sessionStorage.getItem('token'),
