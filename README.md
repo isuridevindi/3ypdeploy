@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+---
+layout: home
+permalink: ./index.html
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Please update this with your repository name and title
+repository-name: e17-3yp-remote-proctoring-system
+title: Remote Proctoring System
+---
 
-## Available Scripts
+# REMOTE PROCTORING SYSTEM
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## TEAM
+-  E/17/058, DEVINDI G.A.I, [e17058@eng.pdn.ac.lk](mailto:name@email.com)
+-  E/17/190, LIYANAGE S.N, [e17190@eng.pdn.ac.lk](mailto:name@email.com)
+-  E/17/369, WANNIGAMA S.B, [e17369@eng.pdn.ac.lk](mailto:name@email.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[//]: # (## [Image of the final hardware]) 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## CONTENT
+1. [PROBLEM STATEMENT](#problem-statement)
+2. [SOLUTION](#solution )
+3. [SYSTEM OVERVIEW](#system-overview)
+4. [LINKS](#links)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## PROBLEM STATEMENT
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When conducting examinations where the skills of the students in a limited timeframe, it's crucial to manage the external factors affecting the performance of the students at a satisfactory level. 
+However it could be challenging to manage these factors in an online environment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## SOLUTION
+##### ***REMOTE PROCTORING DEVICE***
+We have come up with a single device which integrates the hardware and software components needed to conduct an examination in the currently implemented system, which will provide a seamless process for the proctors and students involved in an examination.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[//]: # (## Solution Architecture High level diagram + description)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## BASIC FEATURES
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### ***STUDENT'S UI***
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://user-images.githubusercontent.com/73728629/138657209-e3aa86d8-219f-4451-be80-c847ba2975cf.mp4
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### ***ADMINS'S UI***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+https://user-images.githubusercontent.com/73728629/138657246-2625ba8d-5e1f-4238-82a9-e8800e614950.mp4
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#### ***PROCTOR'S UI***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+https://user-images.githubusercontent.com/73728629/138657261-dceedda0-a32f-422b-b10a-5e754c3209f1.mp4
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### ***REMOTE DEVICE***
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## SYSTEM OVERVIEW
+
+![system](./assets/img/system/oursystem.PNG)
+
+The device on the student's side is capable of capturing the video and audio stream from students continuously even incase of a power failure.
+The proctor will be able to monitor the video and audio streams captured from all the students facing an examination through the browser application in the proctor's side.
+
+
+##### ***HIGH-LEVEL SYSTEM OVERVIEW***
+![overview](./assets/img/system/system.PNG)
+
+The system consists of three main endpoints.
+
+* Web browser in Proctor's end
+* Desktop application in Student's end
+* Database and server application hosted on the Cloud
+* Method used to ensure secure video/audio streaming:
+
+HTTPS protects the user from so-called “man-in-the-middle” attacks where hackers can use vulnerabilities in these public networks to steal data as it’s being transmitted to the viewer. using HLS encryption to mask a users’ connection with the website and prevents this sort of attack.
+
+#### ***TECHNOLOGY STACK***
+![technology](./assets/img/system/technology.PNG)
+
+## LINKS
+
+- [Project Repository](https://github.com/cepdnaclk/e17-3yp-remote-proctoring-system){:target="_blank"}
+- [Project Page](https://cepdnaclk.github.io/e17-3yp-remote-proctoring-system){:target="_blank"}
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/){:target="_blank"}
+- [University of Peradeniya](https://eng.pdn.ac.lk/){:target="_blank"}
+
+
+[//]: # (Please refer this to learn more about Markdown syntax)
+[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

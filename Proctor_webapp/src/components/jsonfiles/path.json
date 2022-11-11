@@ -1,5 +1,5 @@
 [{
-    "path": "https://connexa.space/api/",
+    "path": "http://localhost:5000/",
     "imagepath":"https://connexa.space/api",
    
     "student": "https://drive.google.com/drive/folders/1YPl5CCRcTMEanVQz1roRr38jZOVGose5?usp=sharing",
