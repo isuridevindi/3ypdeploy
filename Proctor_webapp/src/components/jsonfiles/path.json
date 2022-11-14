@@ -1,9 +1,0 @@
-[{
-    "path": "http://localhost:5000/",
-    "imagepath":"https://connexa.space/api",
-   
-    "student": "https://drive.google.com/drive/folders/1YPl5CCRcTMEanVQz1roRr38jZOVGose5?usp=sharing",
-    "course":"https://drive.google.com/drive/folders/1BaQu1ZIgh2wi5pFc6We9d8-nYwghAiFQ?usp=sharing",
-    "exam":"https://drive.google.com/drive/folders/1ilGunJQXehuvHd8DVBP5OOPUthb4ijny?usp=sharing",
-    "proctor":"https://drive.google.com/drive/folders/1mywWk7gSFf_6laa0YHosWLliqSFVI9Jt?usp=sharing"
-}]
