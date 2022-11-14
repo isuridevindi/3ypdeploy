@@ -62,7 +62,10 @@ app.set('view engine', 'jade');
 //set a static folder
 //this folder is the place where the server searches for the index.html file 
 // first checks inside the public folder for index.html, if not found uses the route to view engine's index
-app.use(express.static(path.join(__dirname, 'public')));
+
+//app.use(express.static(path.join(__dirname, 'public'))); ///THIS IS A LINE BY SAVINDU
+//LINE BY ISURI
+app.use(express.static(path.join(__dirname, 'build')));
 
 // body parser middleware
 app.use(express.json());
@@ -78,6 +81,17 @@ app.use('/users', usersRouter);
 app.use('/admin', adminsRouter);
 app.use('/proctor', proctorsRouter);  // APIs used by the proctor's side UI
 app.use('/student', studentsRouter);  // APIs used by the students' side UI
+
+///Added by isuri
+app.get('/api',(req,res)=>{
+  res.json({
+    message: "this is the api endpoint"
+  })
+})
+app.get('/*',(req,res)=>{
+  res.sendFile(path.join(__dirname, 'build','index.html'))
+})
+// ///
 /////////////////////////////////////////////////////////////////////////////////
 
 // catch 404 and forward to error handler
