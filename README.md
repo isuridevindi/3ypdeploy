@@ -85,6 +85,8 @@ The system consists of three main endpoints.
 
 HTTPS protects the user from so-called “man-in-the-middle” attacks where hackers can use vulnerabilities in these public networks to steal data as it’s being transmitted to the viewer. using HLS encryption to mask a users’ connection with the website and prevents this sort of attack.
 
+test change in mirror repo
+
 #### ***TECHNOLOGY STACK***
 ![technology](./assets/img/system/technology.PNG)
 
