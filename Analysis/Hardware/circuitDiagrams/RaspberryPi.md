@@ -1,2 +1,0 @@
-# Reasons for using the 3B+ model 
-[Reference](https://www.techrepublic.com/article/raspberry-pi-3-model-b-review-hands-on-with-the-new-board/#:~:text=The%20Pi%203%20Model%20B%2B,the%20Pi%203%20Model%20B.&text=However%2C%20the%20B%2B%20ups%20the,%2C%20an%20increase%20of%2016.7%25)
